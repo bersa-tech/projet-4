@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* test installation environnement travail pour sass, création des dossiers assets restaurants configuration de settings.json et de sass */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  height: 100px;
+}
+.container .content {
+  text-align: left;
+  padding: 12px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container h1 {
+  color: bisque;
+}
+.container h2 {
+  color: bisque;
+}
