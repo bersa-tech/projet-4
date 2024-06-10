@@ -1,25 +1,30 @@
-@charset "UTF-8";
-/* test installation environnement travail pour sass, création des dossiers assets restaurants configuration de settings.json et de sass */
-body {
-  font-family: Arial, sans-serif;
-  background-color: white;
+/* -------- CSS avec SASS en mobile first -------- */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  color: black;
 }
 
-.container {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #ffffff;
+  font-size: 1em;
+}
+
+header {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: left;
-  height: 100px;
+  margin: 20px;
+  gap: 20px;
 }
-.container .content {
-  text-align: left;
-  padding: 12px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.container h1 {
-  color: bisque;
-}
-.container h2 {
-  color: bisque;
+header img {
+  height: 40px;
 }

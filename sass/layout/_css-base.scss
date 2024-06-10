@@ -1,0 +1,17 @@
+// css de base
+* {
+  font-family: $Font-main-text;
+  color: $color-main-text;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: $color-bg;
+  font-size: 1em;
+}
