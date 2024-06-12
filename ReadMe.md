@@ -1,4 +1,4 @@
-# OhMyFood-starter-pack
+# OhMyFood by Saber
 
 Projet 4 OC OhMyFood - Saber
 

@@ -1,12 +1,55 @@
 header {
+  height: 125px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-logo-title;
+    font-size: 30px;
+    font-style: italic;
+    height: 55%;
+    font-weight: 400;
+    width: 100%;
+  }
+}
+.mylocation {
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
-  gap: 20px;
+  height: 45%;
+  width: 100%;
+  background-color: $color_bg_grey;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1),
+    0 5px 10px rgba(0, 0, 0, 0.33);
 
-  img {
-    height: 40px;
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20px;
+    padding-left: 60px;
+  }
+
+  input {
+    padding-left: 20px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(15, 13, 13);
+  }
+  ::placeholder {
+    font-family: $font-main-text;
+    font-size: 17px;
+    font-weight: 500;
+    color: $color_text_grey;
+    line-height: 18.75px;
+  }
+  input:focus::placeholder {
+    opacity: 0;
   }
 }

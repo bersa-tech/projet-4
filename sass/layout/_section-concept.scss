@@ -1,0 +1,66 @@
+.concept {
+  height: 440px;
+  width: 100%;
+  background-color: color_bg_White;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    height: 31px;
+    margin: 40px 10px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    .concept-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      width: 322px;
+      height: 72px;
+      background-color: $color_bg_lightGrey;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      gap: 15px;
+
+      .concept-number123 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color_bg_Purple;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        font-size: 14.18px;
+        font-weight: 500;
+        line-height: 16.62px;
+        color: white;
+        margin-left: -10px;
+      }
+      i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color_bg_GreyIcon;
+        height: 100%;
+        width: 30px;
+        font-size: 1.4em;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18.75px;
+      }
+
+      &:hover ::before {
+        color: $color_bg_Purple;
+      }
+    }
+  }
+}
