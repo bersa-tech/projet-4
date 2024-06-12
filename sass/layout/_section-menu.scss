@@ -7,12 +7,13 @@
 
   h2 {
     height: 31px;
-    margin: 40px 0px 20px 10px;
+    margin: 40px 0px 20px 15px;
   }
 
   .bloc-card-menu {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -22,6 +23,7 @@
       width: 340px;
       height: 251px;
       border-radius: 15px;
+      overflow: hidden;
 
       .new-content {
         display: flex;
@@ -47,7 +49,7 @@
         height: 174px;
         width: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: bottom;
       }
 
       .card-content {
@@ -72,12 +74,20 @@
         }
 
         &-right {
-          width: 50px;
+          width: 45px;
+          height: 60px;
           display: flex;
           align-items: center;
           position: relative;
+          font-size: 25px;
         }
       }
+    }
+    a:nth-child(2) img {
+      /* Vos styles ici */
+      object-fit: cover;
+      object-position: center calc(50% - 30px); /* Déplace l'image vers le haut de 10px */
+      border: red solid 2px;
     }
   }
 }

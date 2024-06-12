@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -------- CSS avec SASS en mobile first -------- */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 * {
@@ -182,11 +183,12 @@ header h1 {
 }
 .menu h2 {
   height: 31px;
-  margin: 40px 0px 20px 10px;
+  margin: 40px 0px 20px 15px;
 }
 .menu .bloc-card-menu {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -196,6 +198,7 @@ header h1 {
   width: 340px;
   height: 251px;
   border-radius: 15px;
+  overflow: hidden;
 }
 .menu .bloc-card-menu .card-menu .new-content {
   display: flex;
@@ -220,7 +223,7 @@ header h1 {
   height: 174px;
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: bottom;
 }
 .menu .bloc-card-menu .card-menu .card-content {
   background: #ffffff;
@@ -241,10 +244,18 @@ header h1 {
   font-weight: 300;
 }
 .menu .bloc-card-menu .card-menu .card-content-right {
-  width: 50px;
+  width: 45px;
+  height: 60px;
   display: flex;
   align-items: center;
   position: relative;
+  font-size: 25px;
+}
+.menu .bloc-card-menu a:nth-child(2) img {
+  /* Vos styles ici */
+  object-fit: cover;
+  object-position: center calc(50% - 30px); /* Déplace l'image vers le haut de 10px */
+  border: red solid 2px;
 }
 
 footer {
