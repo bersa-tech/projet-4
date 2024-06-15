@@ -91,6 +91,7 @@
             rgba(171, 94, 220, 1) 0%,
             rgba(223, 111, 218, 1) 58%
           );
+          background-clip: text; /* Ajout de la version standard */
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }

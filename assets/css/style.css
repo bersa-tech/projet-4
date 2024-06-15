@@ -397,6 +397,7 @@ footer .menu-footer ul li a {
   color: #9256dc;
   z-index: 2;
   background: linear-gradient(0deg, rgb(171, 94, 220) 0%, rgb(223, 111, 218) 58%);
+  background-clip: text; /* Ajout de la version standard */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
