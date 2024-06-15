@@ -24,6 +24,7 @@
       height: 251px;
       border-radius: 15px;
       overflow: hidden;
+      transition: 0.5s ease-out;
 
       .new-content {
         display: flex;
@@ -80,14 +81,45 @@
           align-items: center;
           position: relative;
           font-size: 25px;
+
+          .icon {
+            position: absolute;
+            cursor: pointer;
+          }
+          .empty {
+            opacity: 1;
+            color: $color_bg_Black;
+          }
+          .fill {
+            opacity: 0;
+            color: $color_bg_Purple;
+            z-index: 2;
+            background: linear-gradient(
+              0deg,
+              rgba(171, 94, 220, 1) 0%,
+              rgba(223, 111, 218, 1) 58%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .empty:hover {
+            opacity: 0;
+          }
+          .fill:hover {
+            opacity: 1;
+            transition: 0.4s;
+          }
         }
       }
-    }
-    a:nth-child(2) img {
-      /* Vos styles ici */
-      object-fit: cover;
-      object-position: center calc(50% - 30px); /* Déplace l'image vers le haut de 10px */
-      border: red solid 2px;
+      &:hover {
+        transition: 0.6s;
+        box-shadow: 5px 9px 15px rgba(0, 0, 0, 0.481);
+      }
+
+      &:nth-child(2) img {
+        object-fit: cover;
+        object-position: center calc(50% - 30px);
+      }
     }
   }
 }

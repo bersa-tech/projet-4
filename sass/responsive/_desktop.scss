@@ -10,20 +10,21 @@
     background-color: color_bg_White;
     display: flex;
     flex-direction: column;
+    border: solid yellow 3px;
 
     ul {
       display: flex;
       flex-direction: row;
+      border: solid blue 3px;
     }
   }
   .menu {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    border: solid red 3px;
 
     .bloc-card-menu {
-      height: 660px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       gap: 50px;
     }
