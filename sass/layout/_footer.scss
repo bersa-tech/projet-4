@@ -24,6 +24,11 @@ footer {
         }
         a {
           color: $color_text_white;
+          transition: 0.6s ease;
+        }
+        a:hover {
+          color: #9356dc;
+          transition: 0.4s;
         }
       }
     }

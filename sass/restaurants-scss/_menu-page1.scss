@@ -94,13 +94,14 @@
           background-clip: text; /* Ajout de la version standard */
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          transition: 0.7s ease;
         }
         .empty:hover {
           opacity: 0;
         }
         .fill:hover {
           opacity: 1;
-          transition: 0.4s;
+          transition: 0.2s;
         }
       }
     }
@@ -151,12 +152,13 @@
             flex-direction: column;
             padding: 15px 0px 15px 15px;
             overflow: hidden;
-            white-space: nowrap;
 
             h3 {
               font-size: 19px;
               font-weight: 700;
               margin-bottom: 5px;
+              overflow: hidden;
+              white-space: nowrap;
               text-overflow: ellipsis;
             }
 
@@ -164,6 +166,8 @@
               width: 100%;
               font-size: 15px;
               font-weight: 300;
+              overflow: hidden;
+              white-space: nowrap;
               text-overflow: ellipsis;
             }
           }
@@ -183,6 +187,7 @@
         }
       }
     }
+
     .order-dish {
       padding: 20px 0px;
       display: flex;
@@ -203,6 +208,12 @@
         color: $color_text_white;
         cursor: pointer;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        transition: box-shadow 0.5s ease;
+
+        &:hover {
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.55);
+          transition: 1s;
+        }
       }
     }
   }

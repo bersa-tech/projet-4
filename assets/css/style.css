@@ -37,7 +37,7 @@ header .logo {
   font-family: "Shrikhand", serif;
   font-size: 30px;
   font-style: italic;
-  height: 55%;
+  height: 60%;
   font-weight: 400;
   width: 100%;
 }
@@ -46,7 +46,7 @@ header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45%;
+  height: 40%;
   width: 100%;
   background-color: #eaeaea;
   box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.33);
@@ -115,7 +115,6 @@ header .logo {
 .concept {
   height: 440px;
   width: 100%;
-  background-color: color_bg_White;
   display: flex;
   flex-direction: column;
 }
@@ -200,6 +199,7 @@ header .logo {
   border-radius: 15px;
   overflow: hidden;
   transition: 0.5s ease-out;
+  position: relative;
 }
 .menu .bloc-card-menu .card-menu .new-content {
   display: flex;
@@ -311,6 +311,11 @@ footer .menu-footer ul li i {
 }
 footer .menu-footer ul li a {
   color: #ffffff;
+  transition: 0.6s ease;
+}
+footer .menu-footer ul li a:hover {
+  color: #9356dc;
+  transition: 0.4s;
 }
 
 .header-menu {
@@ -400,13 +405,14 @@ footer .menu-footer ul li a {
   background-clip: text; /* Ajout de la version standard */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: 0.7s ease;
 }
 .menu-restaurant-container .restaurant-title-heart .empty:hover {
   opacity: 0;
 }
 .menu-restaurant-container .restaurant-title-heart .fill:hover {
   opacity: 1;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 .menu-restaurant-container .restaurant-list {
   height: fit-content;
@@ -449,18 +455,21 @@ footer .menu-footer ul li a {
   flex-direction: column;
   padding: 15px 0px 15px 15px;
   overflow: hidden;
-  white-space: nowrap;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-left h3 {
   font-size: 19px;
   font-weight: 700;
   margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-left p {
   width: 100%;
   font-size: 15px;
   font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-right {
@@ -494,36 +503,79 @@ footer .menu-footer ul li a {
   color: #ffffff;
   cursor: pointer;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.5s ease;
+}
+.menu-restaurant-container .order-dish a:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.55);
+  transition: 1s;
 }
 
 /* responsive desktop */
 @media (min-width: 1024px) {
-  body {
-    max-width: 1440px;
+  section {
+    padding: 0 180px;
     margin: 0 auto;
   }
+  .intro h1 {
+    width: fit-content;
+    font-size: 40px;
+    font-weight: 700;
+  }
   .concept {
-    height: 440px;
-    width: 100%;
-    background-color: color_bg_White;
-    display: flex;
-    flex-direction: column;
-    border: solid yellow 3px;
+    height: 230px;
+  }
+  .concept h2 {
+    margin-top: 40px;
+    margin-left: -5px;
   }
   .concept ul {
     display: flex;
     flex-direction: row;
-    border: solid blue 3px;
+    justify-content: left;
   }
   .menu {
-    display: flex;
-    flex-direction: row;
-    border: solid red 3px;
+    width: 100%;
+  }
+  .menu h2 {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: -5px;
   }
   .menu .bloc-card-menu {
+    width: 100%;
+    gap: 60px;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 251px 251px;
+  }
+  .menu .bloc-card-menu .card-menu {
+    width: 100%;
+    height: 251px;
+    position: relative;
+  }
+  footer {
+    height: 114px;
+    padding-top: 45px;
     display: flex;
-    justify-content: space-between;
-    gap: 50px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  footer h2 {
+    order: 1;
+    margin-top: 10px;
+    margin-right: 60px;
+  }
+  footer .menu-footer {
+    width: fit-content;
+    margin-right: 90px;
+  }
+  footer .menu-footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+  footer .menu-footer li:nth-child(2) {
+    margin-right: 30px;
   }
 }
 /* responsive tablette */
