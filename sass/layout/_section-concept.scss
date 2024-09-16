@@ -10,10 +10,9 @@
   }
 
   ul {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
     gap: 30px;
 
     .concept-list {
@@ -29,9 +28,7 @@
       gap: 15px;
 
       .concept-number123 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         background-color: $color_bg_Purple;
         width: 28px;
         height: 28px;
@@ -43,9 +40,7 @@
         margin-left: -10px;
       }
       i {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         color: $color_bg_GreyIcon;
         height: 100%;
         width: 30px;
@@ -64,8 +59,3 @@
     }
   }
 }
-
-/*
-&:hover ::before {
-  color: $color_bg_Purple;
-} */

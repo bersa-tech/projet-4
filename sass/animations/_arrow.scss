@@ -1,0 +1,18 @@
+.fleche {
+  .fa-arrow-left:hover {
+    color: $color_button_bottom;
+    transform: scale(1.1);
+    opacity: 0.8;
+    animation: bounce-left 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes bounce-left {
+  0%, // indiquer que à l'état initial et final la position est 0 
+    100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}

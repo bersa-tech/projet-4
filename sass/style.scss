@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* -------- CSS avec SASS en mobile first -------- */
-// import des fichiers SASS dans le style.scss
+// import des fichiers SCSS dans le style.scss
 // afin de les retranscrire dans le style.css
+@import "./mixin/mixin";
 @import "./base/variables";
 @import "./layout/body";
 @import "./layout/header";
@@ -9,7 +10,11 @@
 @import "./layout/section-concept";
 @import "./layout/section-menu";
 @import "./layout/footer";
-@import "./mixin/mixin";
 @import "./restaurants-scss/menu-page1";
 @import "./responsive/tablette";
 @import "./responsive/desktop";
+@import "./animations/loader";
+@import "./animations/button";
+@import "./animations/appear";
+@import "./animations/arrow";
+@import "./animations/checkfood";

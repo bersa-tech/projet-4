@@ -1,0 +1,29 @@
+.checkfood {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  @include flex-center;
+  background-color: $color_bg_Green;
+  border-radius: 0 15px 15px 0;
+  width: 80px;
+  margin-left: -85px;
+
+  .fa-check {
+    @include flex-center;
+    color: $color_bg_Green;
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: $color_bg_main;
+    border-radius: 50%;
+    animation: bounce-left 2s ease-in-out infinite;
+  }
+}
+
+@keyframes bounce-left {
+  0%, // indiquer que à l'état initial et final la position est 0 
+      100% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}

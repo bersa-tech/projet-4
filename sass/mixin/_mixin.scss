@@ -1,1 +1,5 @@
-// faire les mixines avant le responsive ?
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

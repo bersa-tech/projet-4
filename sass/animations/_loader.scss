@@ -1,0 +1,65 @@
+.loader {
+  @include flex-center;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  opacity: 1;
+  animation: fadeOut 3s ease-out forwards;
+
+  .loader-circle {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    background-color: $color_bg_Green;
+    border-radius: 50%;
+    animation: bounce 1.2s ease-in-out infinite;
+
+    &:nth-child(2) {
+      background-color: $color_button_top;
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      background-color: $color_button_bottom;
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+.content {
+  display: block;
+  opacity: 0;
+  animation: showContent 0.4s ease-in forwards;
+  animation-delay: 2s;
+}
+
+@keyframes bounce {
+  0%, // indiquer que à l'état initial et final la position est 0 
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes showContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -8,9 +8,6 @@
     font-size: 25px;
     position: absolute;
     padding-left: 25px;
-    .fa-arrow-left:hover {
-      color: $color_button_bottom;
-    }
   }
 }
 
@@ -36,15 +33,14 @@
     flex-direction: column;
     padding: 10px;
     gap: 25px;
-    // border: blue solid 1px;
 
     .restaurant-title {
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: space-between;
       padding-left: 5px;
       margin-top: 25px;
-      // border: blue solid 1px;
 
       h1 {
         height: 50px;
@@ -52,17 +48,15 @@
         font-size: 28px;
         font-style: italic;
         font-weight: 400;
-        display: flex;
-        align-items: center;
+        @include flex-center;
       }
       &-heart {
         width: 50px;
         height: 50px;
-        display: flex;
-        align-items: center;
+        @include flex-center;
         position: relative;
         font-size: 25px;
-        margin-left: 30px;
+        margin-left: 20px;
         padding-bottom: 3px;
 
         .icon {
@@ -116,26 +110,29 @@
       }
 
       ul {
-        border: red solid 3px;
         margin-top: 10px;
-        display: flex;
+        @include flex-center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         width: 100%;
-        // border: blue solid 1px;
 
         .restaurant-list-content {
-          border: yellow solid 3px;
           width: 100%;
           height: 69px;
           background: $color_bg_White;
           border-radius: 15px;
           margin-top: 12px;
           display: flex;
+          overflow: hidden;
 
+          &:hover span {
+            transform: translateX(-50px);
+            transition: transform 0.5s ease-in-out;
+          }
+          &:hover .checkfood {
+            transform: translateX(0%);
+            transition: transform 0.5s ease-in-out;
+          }
           &-left {
-            //border: red solid 2px;
             height: 100%;
             width: 100%;
             display: flex;
@@ -144,26 +141,26 @@
             overflow: hidden;
 
             h3 {
-              font-size: 19px;
+              font-size: 18px;
               font-weight: 700;
               margin-bottom: 5px;
-              overflow: hidden;
-              white-space: nowrap;
               text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
             }
 
             p {
               width: 100%;
               font-size: 15px;
               font-weight: 300;
-              overflow: hidden;
-              white-space: nowrap;
               text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
             }
           }
+
           &-right {
-            // border: blue solid 1px;
-            width: 59px;
+            width: 80px;
             height: 100%;
             display: flex;
             align-items: end;
@@ -172,6 +169,7 @@
 
             span {
               font-weight: bold;
+              transition: transform 0.3s ease-in-out;
             }
           }
         }
@@ -180,14 +178,10 @@
 
     .order-dish {
       padding: 20px 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
 
       a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
         width: 186px;
         height: 50px;
         border-radius: 25px;

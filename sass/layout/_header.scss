@@ -5,9 +5,7 @@ header {
   flex-direction: column;
 
   .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     font-family: $font-logo-title;
     font-size: 30px;
     font-style: italic;
@@ -17,9 +15,7 @@ header {
   }
 }
 .mylocation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   height: 40%;
   width: 100%;
   background-color: $color_bg_grey;
@@ -27,9 +23,7 @@ header {
     0 5px 10px rgba(0, 0, 0, 0.33);
 
   label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     height: 100%;
     width: 20px;
     padding-left: 60px;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -------- CSS avec SASS en mobile first -------- */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
 * {
@@ -32,8 +33,8 @@ header {
 }
 header .logo {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-family: "Shrikhand", serif;
   font-size: 30px;
   font-style: italic;
@@ -44,8 +45,8 @@ header .logo {
 
 .mylocation {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 40%;
   width: 100%;
   background-color: #eaeaea;
@@ -53,8 +54,8 @@ header .logo {
 }
 .mylocation label {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100%;
   width: 20px;
   padding-left: 60px;
@@ -81,9 +82,9 @@ header .logo {
   background-color: #f6f6f6;
   padding: 50px 0px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   gap: 25px;
 }
@@ -94,22 +95,6 @@ header .logo {
   font-size: 18px;
   font-weight: 300;
   line-height: 21.09px;
-}
-.intro a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 218px;
-  height: 50px;
-  border-radius: 25px;
-  opacity: 0px;
-  background: linear-gradient(to top, #9356dc, #ff79da);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18.75px;
-  color: #ffffff;
-  cursor: pointer;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .concept {
@@ -124,9 +109,9 @@ header .logo {
 }
 .concept ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 30px;
 }
 .concept ul .concept-list {
@@ -174,10 +159,6 @@ header .logo {
   color: #9256dc;
 }
 
-/*
-&:hover ::before {
-  color: $color_bg_Purple;
-} */
 .menu {
   width: 100%;
   background-color: #f6f6f6;
@@ -191,10 +172,10 @@ header .logo {
 }
 .menu .bloc-card-menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
 }
 .menu .bloc-card-menu .card-menu {
@@ -208,16 +189,16 @@ header .logo {
 }
 .menu .bloc-card-menu .card-menu .new-content {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: absolute;
   background-color: #99e2d0;
   border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   width: 80px;
   height: 29px;
-  margin-top: 10px;
-  margin-left: 245px;
+  right: 10px;
+  top: 10px;
 }
 .menu .bloc-card-menu .card-menu .new-content p {
   color: #008766;
@@ -253,9 +234,11 @@ header .logo {
   width: 45px;
   height: 60px;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   font-size: 25px;
+  margin-right: 10px;
 }
 .menu .bloc-card-menu .card-menu .card-content-right .icon {
   position: absolute;
@@ -335,9 +318,6 @@ footer .menu-footer ul li a:hover {
   position: absolute;
   padding-left: 25px;
 }
-.header-menu .fleche .fa-arrow-left:hover {
-  color: #9356dc;
-}
 
 .main-img img {
   height: 275px;
@@ -366,6 +346,7 @@ footer .menu-footer ul li a:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding-left: 5px;
   margin-top: 25px;
 }
@@ -376,16 +357,18 @@ footer .menu-footer ul li a:hover {
   font-style: italic;
   font-weight: 400;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .menu-restaurant-container .restaurant-title-heart {
   width: 50px;
   height: 50px;
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   font-size: 25px;
-  margin-left: 30px;
+  margin-left: 20px;
   padding-bottom: 3px;
 }
 .menu-restaurant-container .restaurant-title-heart .icon {
@@ -432,22 +415,29 @@ footer .menu-footer ul li a:hover {
   background-color: #99e2d0;
 }
 .menu-restaurant-container .restaurant-list ul {
-  border: red solid 3px;
   margin-top: 10px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content {
-  border: yellow solid 3px;
   width: 100%;
   height: 69px;
   background: #ffffff;
   border-radius: 15px;
   margin-top: 12px;
   display: flex;
+  overflow: hidden;
+}
+.menu-restaurant-container .restaurant-list ul .restaurant-list-content:hover span {
+  transform: translateX(-50px);
+  transition: transform 0.5s ease-in-out;
+}
+.menu-restaurant-container .restaurant-list ul .restaurant-list-content:hover .checkfood {
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-left {
   height: 100%;
@@ -458,23 +448,23 @@ footer .menu-footer ul li a:hover {
   overflow: hidden;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-left h3 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-left p {
   width: 100%;
   font-size: 15px;
   font-weight: 300;
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-right {
-  width: 59px;
+  width: 80px;
   height: 100%;
   display: flex;
   align-items: end;
@@ -483,17 +473,18 @@ footer .menu-footer ul li a:hover {
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-right span {
   font-weight: bold;
+  transition: transform 0.3s ease-in-out;
 }
 .menu-restaurant-container .order-dish {
   padding: 20px 0px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .menu-restaurant-container .order-dish a {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 186px;
   height: 50px;
   border-radius: 25px;
@@ -563,7 +554,6 @@ footer .menu-footer ul li a:hover {
   }
   .menu-restaurant .restaurant-list .restaurant-list-content {
     width: 634px;
-    border: rgb(20, 196, 250) solid 3px;
   }
   footer {
     height: 114px;
@@ -628,5 +618,176 @@ footer .menu-footer ul li a:hover {
   }
   footer .menu-footer li:nth-child(2) {
     margin-right: 30px;
+  }
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  opacity: 1;
+  animation: fadeOut 3s ease-out forwards;
+}
+.loader .loader-circle {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+  background-color: #99e2d0;
+  border-radius: 50%;
+  animation: bounce 1.2s ease-in-out infinite;
+}
+.loader .loader-circle:nth-child(2) {
+  background-color: #ff79da;
+  animation-delay: 0.2s;
+}
+.loader .loader-circle:nth-child(3) {
+  background-color: #9356dc;
+  animation-delay: 0.4s;
+}
+
+.content {
+  display: block;
+  opacity: 0;
+  animation: showContent 0.4s ease-in forwards;
+  animation-delay: 2s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes showContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.button-effect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  opacity: 0px;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.75px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
+}
+.button-effect:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.restaurant-list {
+  list-style-type: none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideFadeIn 1.5s ease-out forwards;
+}
+.restaurant-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideFadeInLi 0.8s ease-out forwards;
+}
+.restaurant-list li:nth-child(1) {
+  animation-delay: 0.4s; /* le 1er LI */
+}
+.restaurant-list li:nth-child(2) {
+  animation-delay: 0.6s; /* le 2ème LI */
+}
+.restaurant-list li:nth-child(3) {
+  animation-delay: 0.8s; /* le 3ème LI */
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideFadeInLi {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fleche .fa-arrow-left:hover {
+  color: #9356dc;
+  transform: scale(1.1);
+  opacity: 0.8;
+  animation: bounce-left 1.2s ease-in-out infinite;
+}
+
+@keyframes bounce-left {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+.checkfood {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  width: 80px;
+  margin-left: -85px;
+}
+.checkfood .fa-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #99e2d0;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: bounce-left 2s ease-in-out infinite;
+}
+
+@keyframes bounce-left {
+  0%, 100% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-10px);
   }
 }
