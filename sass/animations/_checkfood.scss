@@ -14,16 +14,5 @@
     width: 1.6rem;
     background-color: $color_bg_main;
     border-radius: 50%;
-    animation: bounce-left 2s ease-in-out infinite;
-  }
-}
-
-@keyframes bounce-left {
-  0%, // indiquer que à l'état initial et final la position est 0 
-      100% {
-    transform: translateX(5px);
-  }
-  50% {
-    transform: translateX(-10px);
   }
 }
