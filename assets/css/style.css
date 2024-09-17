@@ -619,67 +619,6 @@ footer .menu-footer ul li a:hover {
     margin-right: 30px;
   }
 }
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 1000;
-  opacity: 1;
-  animation: fadeOut 3s ease-out forwards;
-}
-.loader .loader-circle {
-  width: 50px;
-  height: 50px;
-  margin: 0 20px;
-  background-color: #99e2d0;
-  border-radius: 50%;
-  animation: bounce 1.2s ease-in-out infinite;
-}
-.loader .loader-circle:nth-child(2) {
-  background-color: #ff79da;
-  animation-delay: 0.2s;
-}
-.loader .loader-circle:nth-child(3) {
-  background-color: #9356dc;
-  animation-delay: 0.4s;
-}
-
-.content {
-  display: block;
-  opacity: 0;
-  animation: showContent 0.4s ease-in forwards;
-  animation-delay: 2s;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-40px);
-  }
-}
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-@keyframes showContent {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .button-effect {
   display: flex;
   justify-content: center;
@@ -687,7 +626,6 @@ footer .menu-footer ul li a:hover {
   width: 218px;
   height: 50px;
   border-radius: 25px;
-  opacity: 0px;
   background: linear-gradient(to top, #9356dc, #ff79da);
   font-size: 16px;
   font-weight: 400;
@@ -764,4 +702,66 @@ footer .menu-footer ul li a:hover {
   width: 1.6rem;
   background-color: #ffffff;
   border-radius: 50%;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  opacity: 1;
+  animation: fadeOut 3s ease-out forwards;
+}
+.loader .loader-circle {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+  background-color: #99e2d0;
+  border-radius: 50%;
+  animation: bounce 1.2s ease-in-out infinite;
+}
+.loader .loader-circle:nth-child(2) {
+  background-color: #ff79da;
+  animation-delay: 0.2s;
+}
+.loader .loader-circle:nth-child(3) {
+  background-color: #9356dc;
+  animation-delay: 0.4s;
+}
+
+.content {
+  display: block;
+  opacity: 0;
+  animation: showContent 0.4s ease-in forwards;
+  animation-delay: 2s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes showContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

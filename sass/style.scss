@@ -11,10 +11,10 @@
 @import "./layout/section-menu";
 @import "./layout/footer";
 @import "./restaurants-scss/menu-page1";
-@import "./responsive/tablette";
+@import "./responsive/tablette"; // mobile first en 1 puis tablette avant le desktop
 @import "./responsive/desktop";
-@import "./animations/loader";
 @import "./animations/button";
 @import "./animations/appear";
 @import "./animations/arrow";
 @import "./animations/checkfood";
+@import "./animations/loader";
