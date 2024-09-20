@@ -430,40 +430,19 @@ footer .menu-footer ul li a:hover {
   display: flex;
   overflow: hidden;
 }
-.menu-restaurant-container .restaurant-list ul .restaurant-list-content:hover .restaurant-list-content-right {
-  transform: translateX(-50px);
-  transition: transform 0.5s ease-in-out;
-}
-.menu-restaurant-container .restaurant-list ul .restaurant-list-content:hover .checkfood {
-  transform: translateX(0%);
-  transition: transform 0.5s ease-in-out;
-}
-.menu-restaurant-container .restaurant-list ul .restaurant-list-content-left {
-  height: 100%;
+.menu-restaurant-container .restaurant-list ul .restaurant-list-content .restaurant-list-content-left h3,
+.menu-restaurant-container .restaurant-list ul .restaurant-list-content .restaurant-list-content-left p {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 15px 0px 15px 15px;
-}
-.menu-restaurant-container .restaurant-list ul .restaurant-list-content-left h3 {
-  width: 100%;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
+  transition: width 0.5s ease;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-restaurant-container .restaurant-list ul .restaurant-list-content-left p {
-  width: 100%;
-  font-size: 15px;
-  font-weight: 300;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.menu-restaurant-container .restaurant-list ul .restaurant-list-content:hover .restaurant-list-content-left p, .menu-restaurant-container .restaurant-list ul .restaurant-list-content:hover .restaurant-list-content-left h3 {
+  width: 240px;
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-right {
-  width: 80px;
+  width: 70px;
   height: 100%;
   display: flex;
   align-items: end;
@@ -473,6 +452,27 @@ footer .menu-footer ul li a:hover {
 }
 .menu-restaurant-container .restaurant-list ul .restaurant-list-content-right span {
   font-weight: bold;
+  padding-left: 5px;
+}
+.menu-restaurant-container .restaurant-list ul .restaurant-list-content-left {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0px 15px 15px;
+  transition: width 0.5s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-restaurant-container .restaurant-list ul .restaurant-list-content-left h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.menu-restaurant-container .restaurant-list ul .restaurant-list-content-left p {
+  font-size: 15px;
+  font-weight: 300;
 }
 .menu-restaurant-container .order-dish {
   padding: 20px 0px;
@@ -553,6 +553,9 @@ footer .menu-footer ul li a:hover {
   }
   .menu-restaurant .restaurant-list .restaurant-list-content {
     width: 634px;
+  }
+  .restaurant-list-content:hover .restaurant-list-content-left p, .restaurant-list-content:hover .restaurant-list-content-left h3 {
+    width: 440px !important;
   }
   footer {
     height: 114px;
@@ -690,8 +693,8 @@ footer .menu-footer ul li a:hover {
   align-items: center;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
-  width: 80px;
-  margin-left: -85px;
+  width: 70px;
+  margin-left: -70px;
 }
 .checkfood .fa-check {
   display: flex;
@@ -702,6 +705,15 @@ footer .menu-footer ul li a:hover {
   width: 1.6rem;
   background-color: #ffffff;
   border-radius: 50%;
+}
+
+.restaurant-list-content:hover .checkfood {
+  transform: translateX(0%);
+  transition: transform 0.6s ease-in-out;
+}
+.restaurant-list-content:hover .restaurant-list-content-right {
+  transform: translateX(-50px);
+  transition: transform 0.5s ease-in-out;
 }
 
 .loader {

@@ -4,8 +4,8 @@
   @include flex-center;
   background-color: $color_bg_Green;
   border-radius: 0 15px 15px 0;
-  width: 80px;
-  margin-left: -85px;
+  width: 70px;
+  margin-left: -70px;
 
   .fa-check {
     @include flex-center;
@@ -14,5 +14,16 @@
     width: 1.6rem;
     background-color: $color_bg_main;
     border-radius: 50%;
+  }
+}
+
+.restaurant-list-content {
+  &:hover .checkfood {
+    transform: translateX(0%);
+    transition: transform 0.6s ease-in-out;
+  }
+  &:hover .restaurant-list-content-right {
+    transform: translateX(-50px);
+    transition: transform 0.5s ease-in-out;
   }
 }

@@ -68,6 +68,12 @@
       }
     }
   }
+  .restaurant-list-content {
+    &:hover .restaurant-list-content-left p,
+    &:hover .restaurant-list-content-left h3 {
+      width: 440px !important;
+    }
+  }
 
   footer {
     height: 114px;
